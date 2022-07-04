@@ -1,0 +1,78 @@
+{
+    "quiz": {
+      "sport": {
+        "q1": {
+          "question": "Which one is correct team name in NBA?",
+          "options": [
+            "New York Bulls",
+            "Los Angeles Kings",
+            "Golden State Warriros",
+            "Huston Rocket"
+          ],
+          "answer": "Huston Rocket"
+        },
+        "q2": {
+          "question": "How many medals did China win at the Beijing Olympics?",
+          "options": [
+            "100",
+            "200",
+            "300",
+            "400"
+          ],
+          "answer": "100"
+        },
+        "q3": {
+          "question": "What color are the goalposts in football?",
+          "options": [
+            "Yellow",
+            "Red",
+            "Green",
+            "Blue"
+          ],
+          "answer": "Yellow"
+        },
+        "q4": {
+          "question": "How many players are on a baseball team?",
+          "options": [
+            "9",
+            "10",
+            "11",
+            "8"
+          ],
+          "answer": "9"
+        }
+      },
+      "maths": {
+        "q1": {
+          "question": "5 + 7 = ?",
+          "options": [
+            "10",
+            "11",
+            "12",
+            "13"
+          ],
+          "answer": "12"
+        },
+        "q2": {
+          "question": "12 - 8 = ?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer": "4"
+        },
+        "q3": {
+          "question": "10 + 8 = ?",
+          "options": [
+            "18",
+            "21",
+            "2",
+            "8"
+          ],
+          "answer": "18"
+        }
+      }
+    }
+  }
