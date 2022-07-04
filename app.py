@@ -37,7 +37,7 @@ while True:
     elif (topic == "maths"):
         print(display_questions(topic))
     else:
-        topic = input("topic not found...")
+        print("topic not found...")
     playAgain = input("Enter (y) to play again: ")
     if (playAgain != "y"):
         break;
