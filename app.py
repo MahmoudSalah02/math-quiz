@@ -32,9 +32,9 @@ while True:
     if (topic == "sport"):
         display_question(topic)
     elif (topic == "maths"):
-        display_question("maths")
+        display_question(topic)
     else:
-        topic = input("topic not found, enter topic: ")
+        topic = input("topic not found...")
     playAgain = input("Enter (y) to play again: ")
     if (playAgain != "y"):
         break;
