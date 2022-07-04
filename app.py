@@ -30,7 +30,6 @@ def display_questions(topic):
 
 while True:
     topic = input("> Choose topic (sport/maths): ").lower()
-    score = ""
     if (topic == "sport"):
         print(display_questions(topic))
     
