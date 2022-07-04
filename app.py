@@ -1,7 +1,7 @@
 import json
 
 
-def fetch_quiz_question(file_path):
+def fetch_quiz_question(file_path: str) -> dict:
     """Fetches all quiz questions from a JSON file given the file path"""
     try:
         f = open(file_path)
@@ -20,7 +20,7 @@ def print_dashed_line():
     print("---------------------")
 
 
-def validate_answer(user_answer, question_data):
+def validate_answer(user_answer: str, question_data: dict) -> bool:
     """Accepts the user answer and data on a quetion and returns a boolean of whether the user's answer is correct"""
     actual_answer = question_data["answer"]
     index_of_actual_answer = question_data["options"].index(actual_answer)
@@ -33,14 +33,14 @@ def validate_answer(user_answer, question_data):
         return False
 
 
-def display_topic_questions(topic):
+def display_topic_questions(topic: str) -> float:
     """Accepts a topic from the user, prints the question along with the corresponding options, and returns the final score of the user"""
     quiz_questions = fetch_quiz_question('quiz.json')
     try:
         topic_questions = quiz_questions["quiz"][topic]
     except KeyError:
         print("Topic not found")
-        return
+        return None
     score = 0
     # loop through each question in the specified topic
     for question_num in topic_questions:
@@ -62,10 +62,15 @@ def display_topic_questions(topic):
     return percentage_score
 
 
-while True:
-    topic = input("> Choose topic: ").lower()
-    print("Your final score is: " +
-          str(display_topic_questions(topic) * 100) + "%")
-    playAgain = input("Enter (y) to play again: ").lower()
-    if playAgain != "y":
-        break
+def start_quiz() -> None:
+    while True:
+        topic = input("> Choose topic: ").lower()
+        print("Your final score is: " +
+              str(display_topic_questions(topic) * 100) + "%")
+        playAgain = input("Enter (y) to play again: ").lower()
+        if playAgain != "y":
+            break
+
+
+if __name__ == "__main__":
+    start_quiz()
